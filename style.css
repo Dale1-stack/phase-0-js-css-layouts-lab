@@ -1,6 +1,9 @@
-.cat-container {
+@media (max-width: 768px) {
+  .cat-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     padding: 2em;
 }
@@ -12,6 +15,8 @@
     border: 1 px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
+    flex: 1 1 100%;
+    max-width: 100%;
     transition: transform 0.3s;
 }
 
@@ -27,4 +32,9 @@
 
 .cat-breed p {
   margin: 0.5em 0 1em;
+}
+
+.cat-breed:hover {
+  transform: scale(1.05);
+}
 }
